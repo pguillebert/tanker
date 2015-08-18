@@ -11,9 +11,8 @@ public class DatalogTest extends TestCase {
 
 	public void testWrite() throws IOException {
 		Datalog dl = new Datalog("dom", "type", System.currentTimeMillis(), "mmssgg");
-		QueuePolicy qp = new QueuePolicy();
-		SchemaHelper<Datalog> sh = new SchemaHelper<Datalog>(Datalog.class);
-		TriagingInput ti = new TriagingInput(qp, sh);
+
+		TypeDispatch ti = new TypeDispatch();
 		ti.put(dl);
 		System.out.println("Written 1 elmt");
 		ti.close();

@@ -3,16 +3,16 @@ package tanker;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class QueuePolicy {
+public class QueuePolicy<T> {
 
-	public boolean shouldFlush(Queue<Storable> targetQueue) {
+	public boolean shouldFlush(Queue<T> targetQueue) {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	public Queue<Storable> getNewQueue() {
+	public Queue<T> getNewQueue() {
 		// TODO Auto-generated method stub
-		return new LinkedBlockingQueue<Storable>();
+		return new LinkedBlockingQueue<T>();
 	}
 
 }
